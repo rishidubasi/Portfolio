@@ -274,4 +274,15 @@
 
 
 })(jQuery);
-
+ $(document).ready(function () {
+        $('.number').each(function () {
+            var $this = $(this),
+                num = $this.attr('data-number'); // Get the data-number value
+            
+            if (!isNaN(num)) { // Ensure it's a valid number
+                $this.animateNumber({ number: parseInt(num) });
+            } else {
+                console.error("Invalid number:", num);
+            }
+        });
+    });
