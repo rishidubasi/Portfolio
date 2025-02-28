@@ -274,8 +274,8 @@
 
 
 })(jQuery);
- $(document).ready(function () {
-        $('.number').each(function () {
+   $(document).ready(function () {
+        $('.projects-count').each(function () {
             var $this = $(this),
                 num = $this.attr('data-number'); // Get the data-number value
             
@@ -285,4 +285,3 @@
                 console.error("Invalid number:", num);
             }
         });
-    });
